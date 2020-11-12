@@ -11,10 +11,18 @@ export const WebcamCapture = () => {
     const imageSrc = webcamRef.current.getScreenshot();
     setImgSrc(imageSrc);
   }, [webcamRef, setImgSrc]);
-  console.log(imgSrc);
 
+  
   useEffect(async() => {
-    await makeRequest({ 'url': `${imgSrc}` });
+    if(!imgSrc) return;
+    // console.log(imgSrc);
+    // const realImage = imgSrc.split(',')[1];
+    const res = await fetch(imgSrc);
+    const blob = await res.blob();
+    const arr = await blob.arrayBuffer();
+    console.log(blob);
+    console.log(arr);
+    await makeRequest(arr);
   }, [imgSrc]);
 
   return (
@@ -23,9 +31,6 @@ export const WebcamCapture = () => {
         audio={false}
         ref={webcamRef}
         screenshotFormat="image/jpeg"
-        forceScreenshotSourceSize="true"
-        minScreenshotHeight="500"
-        minScreenshotWidth="500"
 
       />
       <button onClick={capture}>Capture photo</button>
