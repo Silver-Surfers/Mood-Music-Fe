@@ -1,22 +1,32 @@
-import React from 'react';
+import React, { useEffect, useState, useRef, useCallback } from 'react';
 import Webcam from 'react-webcam';
 import ReactDOM from 'react-dom';
+import { makeRequest } from '../sandbox';
 
-const WebcamCapture = () => {
-  const webcamRef = React.useRef(null);
-  const [imgSrc, setImgSrc] = React.useState(null);
+export const WebcamCapture = () => {
+  const webcamRef = useRef(null);
+  const [imgSrc, setImgSrc] = useState(null);
   
-  const capture = React.useCallback(() => {
+  const capture = useCallback(() => {
     const imageSrc = webcamRef.current.getScreenshot();
     setImgSrc(imageSrc);
   }, [webcamRef, setImgSrc]);
-  
+  console.log(imgSrc);
+
+  useEffect(async() => {
+    await makeRequest({ 'url': `${imgSrc}` });
+  }, [imgSrc]);
+
   return (
     <>
       <Webcam
         audio={false}
         ref={webcamRef}
         screenshotFormat="image/jpeg"
+        forceScreenshotSourceSize="true"
+        minScreenshotHeight="500"
+        minScreenshotWidth="500"
+
       />
       <button onClick={capture}>Capture photo</button>
       {imgSrc && (
@@ -30,6 +40,6 @@ const WebcamCapture = () => {
   
 ReactDOM.render(<WebcamCapture />, document.getElementById('root'));
 
-module.exports = WebcamCapture;
+
 
 
