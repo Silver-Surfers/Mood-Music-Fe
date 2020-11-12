@@ -1,11 +1,17 @@
 import React from 'react';
-import { WebcamCapture } from '../../../Sandbox/CameraSandbox/CameraSandbox';
-import SandboxTest from '../../../sandboxTest.jsx';
+import { Provider } from 'react-redux';
+import { WebcamCapture } from './WebcamComponent';
+// import { createStore } from 'createReduxStore';
+const reduxStore = require('redux-store');
+
+const store = reduxStore();
 
 export default function App() {
-  return 
-  <WebcamCapture />,
-  <SandboxTest />
-  ;
-
-
+  return (
+    <>
+      <Provider store={store}>
+        <WebcamCapture />
+      </Provider>
+    </>
+  );
+}
