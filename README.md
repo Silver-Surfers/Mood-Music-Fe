@@ -19,5 +19,5 @@ Project Management Board:
 
 https://miro.com/app/board/o9J_lf1zmpY=/
 
-
-
+For Modeling: 
+    please see - Domain Model.png & ModelingAll.png
