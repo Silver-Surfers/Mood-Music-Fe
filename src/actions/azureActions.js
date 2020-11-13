@@ -7,6 +7,12 @@ export const setImageBlob = imageBlob => ({
   payload: imageBlob
 });
 
+export const SET_IMAGE = 'SET_IMAGE';
+export const setImage = image => ({
+  type: SET_IMAGE,
+  payload: image
+});
+
 export const SET_LOADING = 'SET_LOADING';
 export const setLoading = loading => ({
   type: SET_LOADING,

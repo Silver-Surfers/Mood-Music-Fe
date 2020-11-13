@@ -1,9 +1,10 @@
 /* eslint-disable max-len */
-import { SET_IMAGE_BLOB, SET_LOADING } from '../../src/actions/azureActions';
+import { SET_IMAGE_BLOB, SET_IMAGE, SET_LOADING } from '../../src/actions/azureActions';
 
 const initialState = {
   loading: true,
-  imageBlob: ''
+  imageBlob: '',
+  image: ''
 };
 
 export default function reducer(state = initialState, action) {
@@ -17,6 +18,11 @@ export default function reducer(state = initialState, action) {
       return {
         ...state,
         imageBlob: action.payload
+      };
+    case SET_IMAGE:
+      return {
+        ...state,
+        image: action.payload
       };
   }
 }

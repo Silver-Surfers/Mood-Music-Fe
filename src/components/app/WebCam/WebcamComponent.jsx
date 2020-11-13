@@ -1,17 +1,21 @@
 import React, { useEffect, useState, useRef, useCallback } from 'react';
 import { useDispatch } from 'react-redux';
+import { useHistory } from 'react-router-dom';
 import Webcam from 'react-webcam';
-import { fetchImage } from '../../../actions/azureActions';
+import { fetchImage, setImage } from '../../../actions/azureActions';
 
 export const WebcamCapture = () => {
   const webcamRef = useRef(null);
   const [imgSrc, setImgSrc] = useState(null);
+  const history = useHistory();
   const dispatch = useDispatch();
 
   const capture = useCallback(() => {
     const imageSrc = webcamRef.current.getScreenshot();
     setImgSrc(imageSrc);
-  }, [webcamRef, setImgSrc]);
+    dispatch(setImage(imageSrc));
+    history.push('/image');
+  }, [webcamRef, setImgSrc, setImage]);
 
   useEffect(async() => {
     if(!imgSrc) return;
@@ -31,11 +35,11 @@ export const WebcamCapture = () => {
         screenshotFormat="image/jpeg"
       />
       <button onClick={capture}>Capture photo</button>
-      {imgSrc && (
+      {/* {imgSrc && (
         <img
           src={imgSrc}
         />
-      )}
+      )} */}
     </>
   );
 };
