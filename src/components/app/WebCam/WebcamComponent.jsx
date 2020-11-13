@@ -1,12 +1,14 @@
 import React, { useEffect, useState, useRef, useCallback } from 'react';
+import { useDispatch } from 'react-redux';
 import Webcam from 'react-webcam';
 import ReactDOM from 'react-dom';
-import { makeRequest } from '../../services/mood-music-api';
+import { fetchImage } from '../../../actions/azureActions';
 
 export const WebcamCapture = () => {
   const webcamRef = useRef(null);
   const [imgSrc, setImgSrc] = useState(null);
-  
+  const dispatch = useDispatch();
+
   const capture = useCallback(() => {
     const imageSrc = webcamRef.current.getScreenshot();
     setImgSrc(imageSrc);
@@ -19,7 +21,7 @@ export const WebcamCapture = () => {
     const arr = await blob.arrayBuffer();
     console.log(blob);
     console.log(arr);
-    await makeRequest(arr);
+    dispatch(fetchImage());
   }, [imgSrc]);
   
   return (
