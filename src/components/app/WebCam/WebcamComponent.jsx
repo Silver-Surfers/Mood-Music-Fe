@@ -1,7 +1,6 @@
 import React, { useEffect, useState, useRef, useCallback } from 'react';
 import { useDispatch } from 'react-redux';
 import Webcam from 'react-webcam';
-import ReactDOM from 'react-dom';
 import { fetchImage } from '../../../actions/azureActions';
 
 export const WebcamCapture = () => {
@@ -40,5 +39,3 @@ export const WebcamCapture = () => {
     </>
   );
 };
-  
-ReactDOM.render(<WebcamCapture />, document.getElementById('root'));
