@@ -20,7 +20,7 @@ export const WebcamCapture = () => {
     const arr = await blob.arrayBuffer();
     console.log(blob);
     console.log(arr);
-    dispatch(fetchImage());
+    dispatch(fetchImage(blob));
   }, [imgSrc]);
   
   return (

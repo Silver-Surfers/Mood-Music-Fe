@@ -13,8 +13,8 @@ export const setLoading = loading => ({
   payload: loading
 });
 
-export const fetchImage = () => dispatch => {
-  makeRequest()
+export const fetchImage = (imageBlob) => dispatch => {
+  makeRequest(imageBlob)
     .then(imageBlob => {
         dispatch(setImageBlob(imageBlob));
     })
