@@ -35,6 +35,7 @@ export const WebcamCapture = () => {
         screenshotFormat="image/jpeg"
       />
       <button onClick={capture}>Capture photo</button>
+      
       {/* {imgSrc && (
         <img
           src={imgSrc}

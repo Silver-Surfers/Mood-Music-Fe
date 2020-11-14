@@ -10,6 +10,17 @@ export const makeRequest = async(body) => {
     body
   });
   const json = await res.json();
-  console.log(json, 'hiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiii');
-  return json;
+  const emotion = await json.FaceAttributes.emotion;
+  console.log(json, emotion, 'hiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiii');
+  return emotion;
+
 };
+
+// happiness: emotions.happiness,
+// anger: emotions.anger,
+// contempt: emotions.contempt,
+// disgust: emotions.disgust,
+// fear: emotions.fear,
+// neutral: emotions.neutral,
+// sadness: emotions.sadness,
+// suprise: emotions.suprise

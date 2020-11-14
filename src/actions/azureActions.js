@@ -1,6 +1,12 @@
 /* eslint-disable indent */
 import { makeRequest } from '../../src/services/mood-music-api.js';
 
+export const SET_LOADING = 'SET_LOADING';
+export const setLoading = loading => ({
+  type: SET_LOADING,
+  payload: loading
+});
+
 export const SET_IMAGE_BLOB = 'SET_IMAGE_BLOB';
 export const setImageBlob = imageBlob => ({
   type: SET_IMAGE_BLOB,
@@ -13,10 +19,10 @@ export const setImage = image => ({
   payload: image
 });
 
-export const SET_LOADING = 'SET_LOADING';
-export const setLoading = loading => ({
-  type: SET_LOADING,
-  payload: loading
+export const SET_EMOTION = 'SET_EMOTION';
+export const setEmotion = emotion => ({
+  type: SET_EMOTION,
+  payload: emotion
 });
 
 export const fetchImage = (imageBlob) => dispatch => {
@@ -24,6 +30,9 @@ export const fetchImage = (imageBlob) => dispatch => {
     .then(imageBlob => {
         dispatch(setImageBlob(imageBlob));
     })
+    .then(
+      dispatch(setEmotion())
+    )
     .finally(() => {
       dispatch(setLoading(false));
     });

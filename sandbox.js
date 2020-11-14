@@ -11,16 +11,16 @@
 //   const json = await res.json();
 //   console.log(json, 'hiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiii');
 //   return json;
-  // .then(emotions => ({
-  //   happiness: emotions.happiness,
-  //   anger: emotions.anger,
-  //   contempt: emotions.contempt,
-  //   disgust: emotions.disgust,
-  //   fear: emotions.fear,
-  //   neutral: emotions.neutral,
-  //   sadness: emotions.sadness,
-  //   suprise: emotions.suprise
-  // }))
-  // 
-};
+// .then(emotions => ({
+//   happiness: emotions.happiness,
+//   anger: emotions.anger,
+//   contempt: emotions.contempt,
+//   disgust: emotions.disgust,
+//   fear: emotions.fear,
+//   neutral: emotions.neutral,
+//   sadness: emotions.sadness,
+//   suprise: emotions.suprise
+// }))
+// 
+//};
 
