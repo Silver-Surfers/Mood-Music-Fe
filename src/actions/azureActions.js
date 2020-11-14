@@ -27,13 +27,10 @@ export const setEmotion = emotion => ({
 
 export const fetchImage = (imageBlob) => dispatch => {
   makeRequest(imageBlob)
-    .then(imageBlob => {
-        dispatch(setImageBlob(imageBlob));
+    .then(emotion => {
+      dispatch(setEmotion(emotion));
     })
-    .then(
-      dispatch(setEmotion())
-    )
-    .finally(() => {
+   .finally(() => {
       dispatch(setLoading(false));
     });
 };

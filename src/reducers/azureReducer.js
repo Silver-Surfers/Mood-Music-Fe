@@ -4,8 +4,8 @@ import { SET_IMAGE_BLOB, SET_IMAGE, SET_LOADING, SET_EMOTION } from '../../src/a
 const initialState = {
   loading: true,
   imageBlob: '',
-  image: '',
-  emotion: {}
+  emotion: {},
+  image: ''
 };
 
 export default function reducer(state = initialState, action) {

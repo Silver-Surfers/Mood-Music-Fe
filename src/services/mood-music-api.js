@@ -10,8 +10,7 @@ export const makeRequest = async(body) => {
     body
   });
   const json = await res.json();
-  const emotion = await json.FaceAttributes.emotion;
-  console.log(json, emotion, 'hiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiii');
+  const emotion = json[0].faceAttributes.emotion;
   return emotion;
 
 };

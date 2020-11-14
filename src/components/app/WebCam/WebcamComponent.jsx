@@ -1,21 +1,26 @@
 import React, { useEffect, useState, useRef, useCallback } from 'react';
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { useHistory } from 'react-router-dom';
 import Webcam from 'react-webcam';
-import { fetchImage, setImage } from '../../../actions/azureActions';
+import { selectEmotion } from '../../../selectors/azureSelectors';
+import {
+  fetchImage,
+  setImage
+} from '../../../actions/azureActions';
 
 export const WebcamCapture = () => {
   const webcamRef = useRef(null);
   const [imgSrc, setImgSrc] = useState(null);
   const history = useHistory();
   const dispatch = useDispatch();
+  // const emotion = useSelector(selectEmotion);
 
-  const capture = useCallback(() => {
+  const capture = useCallback(async() => {
     const imageSrc = webcamRef.current.getScreenshot();
     setImgSrc(imageSrc);
-    dispatch(setImage(imageSrc));
+    await dispatch(setImage(imageSrc));
     history.push('/image');
-  }, [webcamRef, setImgSrc, setImage]);
+  }, [webcamRef, setImage]);
 
   useEffect(async() => {
     if(!imgSrc) return;
@@ -28,6 +33,7 @@ export const WebcamCapture = () => {
   }, [imgSrc]);
   
   return (
+    
     <>
       <Webcam
         audio={false}
@@ -35,12 +41,16 @@ export const WebcamCapture = () => {
         screenshotFormat="image/jpeg"
       />
       <button onClick={capture}>Capture photo</button>
+    
       
-      {/* {imgSrc && (
-        <img
-          src={imgSrc}
-        />
-      )} */}
+      {imgSrc && (
+        <>
+          <img
+            src={imgSrc}
+          />
+          {/* <div>{emotion.anger}</div> */}
+        </>
+      )}
     </>
   );
 };
