@@ -1,11 +1,28 @@
 import React from 'react';
-import { WebcamCapture } from '../../../Sandbox/CameraSandbox/CameraSandbox';
-import SandboxTest from '../../../sandboxTest.jsx';
+import { 
+  BrowserRouter as Router, 
+  Route, 
+  Switch 
+} from 'react-router-dom';
+import StillShot from './WebCam/StillShot';
+import { WebcamCapture } from './WebCam/WebcamComponent';
+
 
 export default function App() {
-  return 
-  <WebcamCapture />,
-  <SandboxTest />
-  ;
-
-
+  return (
+    <>
+      <Router>
+        <Switch>
+          <Route 
+            exact path="/" 
+            component={WebcamCapture} 
+          />
+          <Route 
+            exact path="/image" 
+            component={StillShot} 
+          />
+        </Switch>
+      </Router>
+    </>
+  );
+}
