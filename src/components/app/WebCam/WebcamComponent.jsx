@@ -1,8 +1,7 @@
 import React, { useEffect, useState, useRef, useCallback } from 'react';
-import { useDispatch, useSelector } from 'react-redux';
+import { useDispatch } from 'react-redux';
 import { useHistory } from 'react-router-dom';
 import Webcam from 'react-webcam';
-import { selectEmotion } from '../../../selectors/azureSelectors';
 import {
   fetchImage,
   setImage
@@ -13,7 +12,7 @@ export const WebcamCapture = () => {
   const [imgSrc, setImgSrc] = useState(null);
   const history = useHistory();
   const dispatch = useDispatch();
-  // const emotion = useSelector(selectEmotion);
+ 
 
   const capture = useCallback(async() => {
     const imageSrc = webcamRef.current.getScreenshot();
@@ -26,9 +25,7 @@ export const WebcamCapture = () => {
     if(!imgSrc) return;
     const res = await fetch(imgSrc);
     const blob = await res.blob();
-    const arr = await blob.arrayBuffer();
-    console.log(blob);
-    console.log(arr);
+    // const arr = await blob.arrayBuffer();
     dispatch(fetchImage(blob));
   }, [imgSrc]);
   
@@ -48,7 +45,7 @@ export const WebcamCapture = () => {
           <img
             src={imgSrc}
           />
-          {/* <div>{emotion.anger}</div> */}
+          
         </>
       )}
     </>
