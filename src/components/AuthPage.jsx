@@ -23,7 +23,7 @@ export const AuthPage = ({ location }) => {
       <h1>WELCOME TO MOOD MUSIC</h1>
       <button onClick={() => {
         window.location = window.location.href.includes('localhost') 
-          ? 'http://localhost:7891/' 
+          ? 'http://localhost:8888/api/v1/login' 
           : 'https://better-playlists-backend.herokuapp.com/login'; 
       }
       }>Login To Spotify</button>

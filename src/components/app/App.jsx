@@ -17,11 +17,11 @@ export default function App() {
         <Switch>
           <Route 
             exact path="/" 
-            component={WebcamCapture} 
+            component={AuthPage} 
           />
           <Route
-            exact path="/auth"
-            component={AuthPage}
+            exact path="/webcam"
+            component={WebcamCapture}
           />
           <Route 
             exact path="/image" 
