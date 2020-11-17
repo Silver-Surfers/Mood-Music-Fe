@@ -20,3 +20,20 @@ export const makeRequest = async(body) => {
     console.log(error);
   }
 };
+
+export const requestMusic = async(emotions, accessToken) => {
+  try { const res = await fetch(
+    `https://api.spotify.com./v1/search?q=${emotions}&type=playlist`,
+    { 
+      method: 'GET',
+      headers: {
+        'Authorization': 'Bearer ' + accessToken
+      },
+    });
+  const json = await res.json()
+    .then(console.log(json));
+  } catch(error) {
+    console.log(error);
+  }
+  
+};

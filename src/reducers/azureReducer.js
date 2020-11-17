@@ -30,5 +30,7 @@ export default function reducer(state = initialState, action) {
         ...state,
         emotion: action.payload
       };
+    default:
+      return state;
   }
 }

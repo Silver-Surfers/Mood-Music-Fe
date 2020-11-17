@@ -1,2 +1,2 @@
-export const selectEmotion = state => state.emotion;
-export const selectImage = state => state.image;
+export const selectEmotion = state => state.azureReducer.emotion;
+export const selectImage = state => state.azureReducer.image;
