@@ -1,7 +1,10 @@
-import { SET_TOKEN } from '../../src/actions/spotifyActions';
+import { SET_PLAYLIST, SET_TOKEN } from '../../src/actions/spotifyActions';
+import { SET_LOADING } from '../actions/azureActions';
 
 const initialState = { 
-  token: ''
+  token: '',
+  playlist: '',
+  loading: true
 };
 
 export default function spotifyReducer(state = initialState, action) {
@@ -10,6 +13,16 @@ export default function spotifyReducer(state = initialState, action) {
       return { 
         ...state,
         token: action.payload
+      };
+    case SET_PLAYLIST:
+      return {
+        ...state,
+        playlist: action.payload
+      };
+    case SET_LOADING:
+      return {
+        ...state,
+        loading: action.payload
       };
     default:
       return state;

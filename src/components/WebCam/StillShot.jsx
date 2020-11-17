@@ -2,6 +2,7 @@ import React from 'react';
 import { useSelector } from 'react-redux';
 import { selectImage, selectEmotion } from '../../selectors/azureSelectors';
 
+
 const StillShot = () => {
 
   const image = useSelector(selectImage);
