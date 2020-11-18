@@ -37,9 +37,9 @@ export const requestMusic = (emotion, accessToken) => {
   
     .then(res => res.json())
     .then(json => json.playlists.items)
-    .then(items => items.map(item => ({
-      id: item.id
-    })));
+    .then(items => items.map(item => (
+      item.id
+    )));
     
   
   } catch(error) {
