@@ -7,16 +7,16 @@ export const setToken = token => ({
   payload: token
 });
 
-export const SET_PLAYLIST = 'SET_PLAYLIST';
-export const setPlaylist = playlist => ({
-  type: SET_PLAYLIST,
-  payload: playlist
+export const SET_PLAYLISTS = 'SET_PLAYLISTS';
+export const setPlaylists = playlists => ({
+  type: SET_PLAYLISTS,
+  payload: playlists
 });
 
 export const fetchMusic = (emotions, accessToken) => dispatch => {
   requestMusic(emotions, accessToken)
-    .then(playlist => {
-      dispatch(setPlaylist(playlist));
+    .then(playlists => {
+      dispatch(setPlaylists(playlists));
     })
     .finally(() => {
       dispatch(setLoading(false));

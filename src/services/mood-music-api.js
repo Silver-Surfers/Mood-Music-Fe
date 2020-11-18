@@ -1,5 +1,7 @@
 /* eslint-disable max-len */
 
+
+
 export const makeRequest = async(body) => {
   try { const res = await fetch(
     'https://westus.api.cognitive.microsoft.com/face/v1.0/detect?returnFaceId=true&returnFaceLandmarks=false&returnFaceAttributes=emotion&recognitionModel=recognition_03&returnRecognitionModel=false', 
@@ -21,21 +23,27 @@ export const makeRequest = async(body) => {
   }
 };
 
-export const requestMusic = async(emotions, accessToken) => {
-  try { const res = await fetch(
-    `https://api.spotify.com./v1/search?q=${emotions}&type=playlist`,
+export const requestMusic = (emotion, accessToken) => {
+  try { return fetch(
+    `https://api.spotify.com./v1/search?q=${emotion}&type=playlist`,
     { 
       method: 'GET',
       headers: {
         'Authorization': `Bearer ${accessToken}`,
         'Content-Type' : 'application/json'
       },
-    });
-  const json = await res.json();
-  return json;
+    })
+  
+  
+    .then(res => res.json())
+    .then(json => json.playlists.items)
+    .then(items => items.map(item => ({
+      id: item.id
+    })));
+    
+  
   } catch(error) {
     console.log(error);
   }
   
 };
-
