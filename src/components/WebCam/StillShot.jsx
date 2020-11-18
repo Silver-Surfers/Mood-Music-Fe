@@ -30,7 +30,7 @@ export const StillShot = () => {
       </div>
       <div>
         <button onClick={() => {
-          window.location = '/webcam';
+          history.push('/webcam');
         }}>Retake Your Picture</button>
         <button onClick={() => {
           history.push('/media');
