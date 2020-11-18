@@ -13,8 +13,8 @@ export const setPlaylist = playlist => ({
   payload: playlist
 });
 
-export const fetchMusic = (emotions) => dispatch => {
-  requestMusic(emotions)
+export const fetchMusic = (emotions, accessToken) => dispatch => {
+  requestMusic(emotions, accessToken)
     .then(playlist => {
       dispatch(setPlaylist(playlist));
     })

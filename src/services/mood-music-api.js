@@ -7,7 +7,7 @@ export const makeRequest = async(body) => {
       method: 'POST',
       headers: {
         'Content-Type': 'application/octet-stream',
-        'Ocp-Apim-Subscription-Key': '607bb282837f4747b2d4acde5c3b7526'
+        'Ocp-Apim-Subscription-Key': `${process.env.AZURE_KEY}`
       },
       body
     });
@@ -27,13 +27,15 @@ export const requestMusic = async(emotions, accessToken) => {
     { 
       method: 'GET',
       headers: {
-        'Authorization': 'Bearer ' + accessToken
+        'Authorization': `Bearer ${accessToken}`,
+        'Content-Type' : 'application/json'
       },
     });
-  const json = await res.json()
-    .then(console.log(json));
+  const json = await res.json();
+  return json;
   } catch(error) {
     console.log(error);
   }
   
 };
+

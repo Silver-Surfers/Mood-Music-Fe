@@ -5,8 +5,9 @@ import {
   Switch 
 } from 'react-router-dom';
 import { AuthPage } from '../AuthPage';
-import StillShot from './WebCam/StillShot';
-import { WebcamCapture } from './WebCam/WebcamComponent';
+import { StillShot } from '../WebCam/StillShot';
+import { WebcamCapture } from '../WebCam/WebcamComponent';
+import { MusicPlayer } from '../MusicPlayer';
 
 
 
@@ -26,6 +27,10 @@ export default function App() {
           <Route 
             exact path="/image" 
             component={StillShot} 
+          />
+          <Route
+            exact path="/media"
+            component={MusicPlayer}
           />
         </Switch>
       </Router>
