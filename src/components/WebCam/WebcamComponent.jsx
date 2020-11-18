@@ -7,6 +7,7 @@ import { setToken } from '../../actions/spotifyActions';
 import PropTypes from 'prop-types';
 
 
+
 export const WebcamCapture = ({ location }) => {
   const webcamRef = useRef(null);
   const [imgSrc, setImgSrc] = useState(null);
@@ -26,7 +27,7 @@ export const WebcamCapture = ({ location }) => {
   }, [webcamRef, setImage]);
 
   useEffect(() => {
-    dispatch(setToken(token));
+    if(token) dispatch(setToken(token));
 
   }, []);
 
