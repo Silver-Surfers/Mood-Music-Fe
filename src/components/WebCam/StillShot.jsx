@@ -17,7 +17,7 @@ export const StillShot = () => {
 
   return (
     <>
-      <div>
+      <div data-testid="emotions">
         <img src={image} />
         <p>anger: {emotion.anger}</p>
         <p>contempt: {emotion.contempt}</p>
