@@ -11,7 +11,8 @@ export const MusicPlayer = () => {
   const playlists = useSelector(selectPlaylists);
   const num = Math.ceil(Math.random() * playlists.length);
   const playlist = playlists[num];
-  
+  console.log(playlist);
+
   
   useEffect(() => {
     dispatch(fetchMusic(emotion, token));
@@ -20,7 +21,14 @@ export const MusicPlayer = () => {
 
   return (
     <>
-      <h1>This is the token {token}</h1>
+      <iframe
+        src={`https://open.spotify.com/embed/playlist/${playlist}`}
+        width="300"
+        height="380"
+        frameBorder="0"
+        allowtransparency="true"
+        allow="encrypted-media">
+      </iframe>
     </>
   );
 };
