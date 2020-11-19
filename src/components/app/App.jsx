@@ -8,6 +8,7 @@ import { AuthPage } from '../AuthPage';
 import { StillShot } from '../WebCam/StillShot';
 import { WebcamCapture } from '../WebCam/WebcamComponent';
 import { MusicPlayer } from '../MusicPlayer';
+import { AboutPage } from '../AboutPage';
 
 
 
@@ -31,6 +32,10 @@ export default function App() {
           <Route
             exact path="/media"
             component={MusicPlayer}
+          />
+          <Route
+            exact path="/about"
+            component={AboutPage}
           />
         </Switch>
       </Router>
