@@ -1,11 +1,73 @@
+:root {
+  --red: #e63946ff;
+  --violet: #6f58c9ff;
+  --purple: #3c153bff;
+  --orange: #ff6700ff;
+  --green: #1DB954;
+  --yellow: #e5f77dff;
+  --blue:#457b9dff;
+  --surprise: #f1faeeff;
+}
+
 .bigBox {
   display: flex;
   flex-direction: column;
   align-items: center;
   margin-top: 40px;
+  min-height: 100vh;
 }
 .controls {
   display: flex;
   flex-direction: row;
-  margin-top: 10px;
+  text-align: center;
+}
+.button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 100px;
+  margin: 14px 5px 0 5px; 
+  box-shadow: gray 3px 3px 5px;
+  background-color: var(--green);
+  border: solid black 3px;
+  border-radius: 100px;
+  padding: 5px;
+}
+.player {
+  box-shadow: gray 5px 5px 5px;
+  border: solid black 5px;
+  border-radius: 30px;
+  margin-top: 10vh;
+}
+
+.happiness {
+  background-color: var(--green);
+}
+
+.anger {
+  background-color: var(--red);
+}
+
+.sadness {
+  background-color: var(--blue);
+}
+
+.fear {
+  background-color: var(--orange);
+}
+
+.disgust {
+  background-color: var(--purple);
+}
+
+.surprise {
+  background-color: var(--yellow);
+}
+
+.contempt {
+  background-color: var(--violet);
+}
+
+.neutral {
+  background-color: var(--neutral);
 }

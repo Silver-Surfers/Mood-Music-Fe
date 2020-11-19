@@ -54,7 +54,7 @@ export const WebcamCapture = ({ location }) => {
         ref={webcamRef}
         screenshotFormat="image/jpeg"
       />
-      <button onClick={capture}>Capture photo</button>
+      <button className={styles.button} onClick={capture}>Capture photo</button>
     
     </div>
   );

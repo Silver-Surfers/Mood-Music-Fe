@@ -8,12 +8,13 @@ import { AuthPage } from '../AuthPage';
 import { StillShot } from '../WebCam/StillShot';
 import { WebcamCapture } from '../WebCam/WebcamComponent';
 import { MusicPlayer } from '../MusicPlayer';
+import styles from './App.css';
 
 
 
 export default function App() {
   return (
-    <>
+    <div className={styles.app}>
       <Router>
         <Switch>
           <Route 
@@ -34,6 +35,6 @@ export default function App() {
           />
         </Switch>
       </Router>
-    </>
+    </div>
   );
 }

@@ -6,7 +6,7 @@
   --green: #1DB954;
   --yellow: #e5f77dff;
   --blue:#457b9dff;
-  --surprise: #f1faeeff;
+  --neutral: #f1faeeff;
 }
 
 .bigBox {
@@ -14,6 +14,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  overflow: scroll;
 
   img {
     margin-top: 40px;
@@ -21,6 +22,7 @@
     width: 80vw;
     border: solid black 5px;
     border-radius: 100px;
+    box-shadow: gray 5px 5px 5px;
   }
 }
 .graphBox {
@@ -63,7 +65,7 @@
   padding: 10px;
   border: solid black 3px;
   border-radius: 10px;
-  
+  margin-top: 10px;
 }
 
 .contempt{
@@ -75,6 +77,7 @@
   padding: 10px;
   border: solid black 3px;
   border-radius: 10px;
+  margin-top: 10px;
 }
 
 .disgust {
@@ -86,6 +89,7 @@
   padding: 10px;
   border: solid black 3px;
   border-radius: 10px;
+  margin-top: 10px;
 }
 
 .fear{
@@ -97,6 +101,7 @@
   padding: 10px;
   border: solid black 3px;
   border-radius: 10px;
+  margin-top: 10px;
 }
 
 .happiness {
@@ -108,6 +113,7 @@
   padding: 10px;
   border: solid black 3px;
   border-radius: 10px;
+  margin-top: 10px;
 }
 
 .neutral {
@@ -119,6 +125,7 @@
   padding: 10px;
   border: solid black 3px;
   border-radius: 10px;
+  margin-top: 10px;
 }
 
 .sadness {
@@ -130,6 +137,7 @@
   padding: 10px;
   border: solid black 3px;
   border-radius: 10px;
+  margin-top: 10px;
 }
 
 .surprise {
@@ -141,12 +149,14 @@
   padding: 10px;
   border: solid black 3px;
   border-radius: 10px;
+  margin-top: 10px;
 }
 
-button {
-  margin: 0 20px;
+.button {
+  margin: 0 20px 20px 0;
   background-color: var(--green);
   border: solid black 3px;
   border-radius: 100px;
   padding: 5px;
+  box-shadow: gray 3px 3px 5px;
 }

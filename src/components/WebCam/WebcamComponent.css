@@ -1,7 +1,19 @@
+:root {
+  --red: #e63946ff;
+  --violet: #6f58c9ff;
+  --purple: #3c153bff;
+  --orange: #ff6700ff;
+  --green: #1DB954;
+  --yellow: #e5f77dff;
+  --blue:#457b9dff;
+  --surprise: #f1faeeff;
+}
+
 .bigBox {
   display: flex;
   flex-direction: column;
   align-items: center;
+  background-color: var(--neutral);
 }
 
 .webcam {
@@ -10,4 +22,17 @@
     width: 80vw;
     border: solid black 5px;
     border-radius: 100px;
+    box-shadow: gray 5px 5px 5px;
+}
+.button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 100px;
+  margin-top: 10px;
+  background-color: var(--green);
+  border: solid black 3px;
+  border-radius: 100px;
+  padding: 5px;
+  box-shadow: gray 3px 3px 5px;
 }

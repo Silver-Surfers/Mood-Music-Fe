@@ -18,6 +18,13 @@ export const emotionFunction = (emotion) => {
 
 };
 
+export const colorCodeFunction = (emotion) => {
+  const singleEmotion = Object.keys(emotion).reduce(
+    (a, b) => emotion[a] > emotion[b] ? a : b);
+  return singleEmotion;
+
+};
+
 const arrayMatch = (singleEmotion) => {
   switch(singleEmotion) {
     case 'anger':
