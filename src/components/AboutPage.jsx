@@ -65,7 +65,7 @@ export const AboutPage = () => {
           <img src={AnnaliseMurphy} alt="Annalise" />
           <h3>Annalise Murphy</h3>
           <p>
-            Annalise is a software engineer, playlist curator and an avid music lover! When she&#39;s not jamming out Black Sabbeth, she&#39;s busy building full-stack apps. 
+            Annalise is a software engineer, playlist curator and an avid music lover! When she&#39;s not jamming out Black Sabbeth, she&#39;s busy building Full Stack apps.
           </p>
           <div className="links">
             <a href="https://github.com/Annalise-M">
