@@ -1,0 +1,152 @@
+:root {
+  --red: #e63946ff;
+  --violet: #6f58c9ff;
+  --purple: #3c153bff;
+  --orange: #ff6700ff;
+  --green: #1DB954;
+  --yellow: #e5f77dff;
+  --blue:#457b9dff;
+  --surprise: #f1faeeff;
+}
+
+.bigBox {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  img {
+    margin-top: 40px;
+    margin-bottom: 20px;
+    width: 80vw;
+    border: solid black 5px;
+    border-radius: 100px;
+  }
+}
+.graphBox {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 80vw;
+
+  .groupA {
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+    margin-right: 20px;
+  }
+
+  .graph {
+    
+   
+
+  }
+
+  .groupB {
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+    margin-left: 20px
+    
+  }
+}
+
+
+
+.anger {
+  background-color: var(--red);
+  max-height: 30px;
+  max-width: 100px;
+  min-height: 20px;
+  min-width: 50px;
+  padding: 10px;
+  border: solid black 3px;
+  border-radius: 10px;
+  
+}
+
+.contempt{
+  background-color: var(--violet);
+  max-height: 30px;
+  max-width: 100px;
+  min-height: 20px;
+  min-width: 50px;
+  padding: 10px;
+  border: solid black 3px;
+  border-radius: 10px;
+}
+
+.disgust {
+  background-color: var(--purple);
+  max-height: 30px;
+  max-width: 100px;
+  min-height: 20px;
+  min-width: 50px;
+  padding: 10px;
+  border: solid black 3px;
+  border-radius: 10px;
+}
+
+.fear{
+  background-color: var(--orange);
+  max-height: 30px;
+  max-width: 100px;
+  min-height: 20px;
+  min-width: 50px;
+  padding: 10px;
+  border: solid black 3px;
+  border-radius: 10px;
+}
+
+.happiness {
+  background-color: var(--green);;
+  max-height: 30px;
+  max-width: 100px;
+  min-height: 20px;
+  min-width: 50px;
+  padding: 10px;
+  border: solid black 3px;
+  border-radius: 10px;
+}
+
+.neutral {
+  background-color: var(--neutral);
+  max-height: 30px;
+  max-width: 100px;
+  min-height: 20px;
+  min-width: 50px;
+  padding: 10px;
+  border: solid black 3px;
+  border-radius: 10px;
+}
+
+.sadness {
+  background-color: var(--blue);
+  max-height: 30px;
+  max-width: 100px;
+  min-height: 20px;
+  min-width: 50px;
+  padding: 10px;
+  border: solid black 3px;
+  border-radius: 10px;
+}
+
+.surprise {
+  background-color: var(--yellow);
+  max-height: 30px;
+  max-width: 100px;
+  min-height: 20px;
+  min-width: 50px;
+  padding: 10px;
+  border: solid black 3px;
+  border-radius: 10px;
+}
+
+button {
+  margin: 0 20px;
+  background-color: var(--green);
+  border: solid black 3px;
+  border-radius: 100px;
+  padding: 5px;
+}
