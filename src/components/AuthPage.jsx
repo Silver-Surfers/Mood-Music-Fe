@@ -1,4 +1,7 @@
+/* eslint-disable max-len */
 import React from 'react';
+import styles from './AuthPage.css';
+import spotify from  '../images/spotify.png';
 // import PropTypes from 'prop-types';
 // import { useEffect } from 'react';
 // import { useDispatch } from 'react-redux';
@@ -20,14 +23,22 @@ export const AuthPage = () => {
 
   return (
     <>
-      <h1>WELCOME TO MOOD MUSIC</h1>
-      <button onClick={() => {
-        window.location = `${process.env.REACT_APP_SERVER_URL}/api/v1/login`;
-      }
-      }>Login To Spotify</button>
+      <div className={styles.flex}>
+        <div className={styles.record}>
+        </div>
+        <div className={styles.content}>
+          <h1 className={styles.mood}>MOOD MUSIC</h1>
+          <div className={styles.button}>
+            <button onClick={() => {
+              window.location = `${process.env.REACT_APP_SERVER_URL}/api/v1/login`;
+            }
+            }>Log In<img src={spotify} alt="Spotify Logo" />
+            </button>
+          </div>
+        </div>
+      </div>
     </>
   );
-
 };
 // AuthPage.propTypes = {
 //   location: PropTypes.string.isRequired
