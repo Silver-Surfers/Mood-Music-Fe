@@ -17,7 +17,7 @@ export const AboutPage = () => {
           <img src={JerudMoyer} alt="Jerud" />
           <h3>Jerud Moyer</h3>
           <p>
-            Jerud is a full-stack software developer and dedicated musician. When he's feeling happy, sad or otherwise you can probably find him listening to Black Sabbath.
+            Jerud is a full-stack software developer and dedicated musician. When he&#39;s feeling happy, sad or otherwise you can probably find him listening to Black Sabbath.
           </p>
           <div className="links">
             <a href="https://github.com/Jerud-Moyer">
@@ -49,7 +49,7 @@ export const AboutPage = () => {
           <img src={NateKruck} alt="Nate" />
           <h3>Nate Kruck</h3>
           <p>
-            Full Stack Software Engineer. I like upbeat music no matter what mood I'm in! Hit me with some EDM and you'll catch me going wild!
+            Full Stack Software Engineer. I like upbeat music no matter what mood I&#39;m in! Hit me with some EDM and you&#39;ll catch me going wild!
           </p>
           <div className="links">
             <a href="https://github.com/Nate-Kruck">
@@ -65,7 +65,7 @@ export const AboutPage = () => {
           <img src={AnnaliseMurphy} alt="Annalise" />
           <h3>Annalise Murphy</h3>
           <p>
-            Annalise is a software engineer, playlist curator and an avid music lover! When she's not jamming out Black Sabbeth, she's busy building full-stack apps. 
+            Annalise is a software engineer, playlist curator and an avid music lover! When she&#39;s not jamming out Black Sabbeth, she&#39;s busy building full-stack apps. 
           </p>
           <div className="links">
             <a href="https://github.com/Annalise-M">
