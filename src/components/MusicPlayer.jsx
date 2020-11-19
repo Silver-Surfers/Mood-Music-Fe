@@ -1,3 +1,4 @@
+/* eslint-disable max-len */
 import React, { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { selectToken, selectPlaylists } from '../selectors/spotifySelectors';
@@ -16,16 +17,11 @@ export const MusicPlayer = () => {
   console.log(emotion, 'This is the emotion list');
   const history = useHistory();
   
-
-
-  
   useEffect(async() => {
     const singleEmotion = await emotionFunction(emotion);
     const doubleEmotions = await twoEmotions(singleEmotion);
     console.log('This is the emotion result', doubleEmotions);
     await dispatch(fetchMusic(doubleEmotions, token));
-
-    
   }, []);
 
   return (
@@ -38,9 +34,25 @@ export const MusicPlayer = () => {
         allowtransparency="true"
         allow="encrypted-media">
       </iframe>
+      {/* <button 
+        src={`https://open.spotify.com/follow/v1/playlists/${playlist}/followers`}>
+          follow playlist
+      </button> */}
+      {/* <iframe
+        src={`https://open.spotify.com/follow/v1/playlists/${playlist}/followers`}
+        width="300"
+        height="56" 
+        scrolling="no" 
+        frameBorder="0" 
+        style="border:none; overflow:hidden;" 
+        allowtransparency="true">
+      </iframe> */}
       <button onClick={() => {
         history.push('/webcam');
       }}>Take another picture</button>
+      <button onClick={() => {
+        history.push('/media');
+      }}>Get a different playlist</button>
     </>
   );
 };
