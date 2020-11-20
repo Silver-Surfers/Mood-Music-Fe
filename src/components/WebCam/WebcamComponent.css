@@ -1,0 +1,44 @@
+:root {
+  --red: #e63946ff;
+  --violet: #6f58c9ff;
+  --purple: #3c153bff;
+  --orange: #ff6700ff;
+  --green: #1DB954;
+  --yellow: #e5f77dff;
+  --blue:#457b9dff;
+  --neutral: #f1faeeff;
+}
+
+.bigBox {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: linear-gradient(45deg, var(--neutral), var(--green), var(--neutral), var(--yellow));
+  min-height: 100vh;
+}
+
+.webcam {
+    margin-top: 40px;
+    margin-bottom: 20px;
+    width: 80vw;
+    border: solid black 5px;
+    border-radius: 100px;
+    box-shadow: gray 5px 5px 5px;
+}
+.button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  min-width: 100px;
+  height: 40px;
+  text-transform: uppercase;
+  margin-top: 10px;
+  letter-spacing: 1.1px;
+  font-weight: 600;
+  background: linear-gradient(90deg, rgba(101,211,110,1) 0%, rgb(10, 110, 55) 100%);
+  border: solid black 3px;
+  border-radius: 100px;
+  padding: 5px;
+  box-shadow: gray 3px 3px 5px;
+}

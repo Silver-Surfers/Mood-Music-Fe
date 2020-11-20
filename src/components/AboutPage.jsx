@@ -1,4 +1,3 @@
-/* eslint-disable max-len */
 import { names } from '../Data/data';
 import React from 'react';
 import github from '../Data/Images/github.png';
