@@ -1,45 +1,47 @@
 import React from 'react';
 import { useHistory } from 'react-router-dom';
-
-
-
 import { useSelector } from 'react-redux';
-import { selectImage, selectEmotion } from '../../selectors/azureSelectors';
-
+import { selectEmotion, selectImage } from '../../selectors/azureSelectors';
+import { Graph } from './Graph';
+import styles from './StillShot.css';
 
 
 export const StillShot = () => {
-  console.log(location);
   const image = useSelector(selectImage);
-  const emotion = useSelector(selectEmotion);
   const history = useHistory(); 
+  const emotion = useSelector(selectEmotion);
  
 
   return (
-    <>
-      <div>
+    <div className={styles.bigBox}>
+      <div >
         <img src={image} />
-        <p>anger: {emotion.anger}</p>
-        <p>contempt: {emotion.contempt}</p>
-        <p>disgust: {emotion.disgust}</p>
-        <p>fear: {emotion.fear}</p>
-        <p>happiness: {emotion.happiness}</p>
-        <p>neutral: {emotion.neutral}</p>
-        <p>sadness: {emotion.sadness}</p>
-        <p>surprise: {emotion.surprise}</p>
+        <div className={styles.graphBox}>
+          <div className={styles.groupA}>
+            <p className={styles.anger}>anger</p>
+            <p className={styles.contempt}>contempt</p>
+            <p className={styles.disgust}>disgust</p>
+            <p className={styles.fear}>fear</p>
+          </div>
+          {emotion &&
+          <Graph className={styles.graph}/>
+          }
+          <div className={styles.groupB}>
+            <p className={styles.happiness}>happiness</p>
+            <p className={styles.neutral}>neutral</p>
+            <p className={styles.sadness}>sadness</p>
+            <p className={styles.surprise}>surprise</p>
+          </div>
+        </div>
       </div>
       <div>
-        <button onClick={() => {
+        <button className={styles.button} onClick={() => {
           history.push('/webcam');
         }}>Retake Your Picture</button>
-        <button onClick={() => {
+        <button className={styles.button} onClick={() => {
           history.push('/media');
         }}>Submit for Playlist</button>
       </div>
-    </>
+    </div>
   );
 };
-
-
-
-

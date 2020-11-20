@@ -1,3 +1,4 @@
+
 import { 
   happinessArray, 
   sadnessArray, 
@@ -12,6 +13,14 @@ export const emotionFunction = (emotion) => {
   const singleEmotion = Object.keys(emotion).reduce(
     (a, b) => emotion[a] > emotion[b] ? a : b);
 
+  if(singleEmotion === 'contempt') return 'anger';
+  return singleEmotion;
+
+};
+
+export const colorCodeFunction = (emotion) => {
+  const singleEmotion = Object.keys(emotion).reduce(
+    (a, b) => emotion[a] > emotion[b] ? a : b);
   return singleEmotion;
 
 };
@@ -47,7 +56,3 @@ export const twoEmotions = (singleEmotion) => {
   return `${singleEmotion},${secondEmotion}`;
 
 };
-
-
-
-

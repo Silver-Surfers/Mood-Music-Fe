@@ -5,7 +5,7 @@ import Webcam from 'react-webcam';
 import { fetchImage, setImage } from '../../actions/azureActions';
 import { setToken } from '../../actions/spotifyActions';
 import PropTypes from 'prop-types';
-
+import styles from './WebcamComponent.css';
 
 
 export const WebcamCapture = ({ location }) => {
@@ -46,18 +46,20 @@ export const WebcamCapture = ({ location }) => {
   
   return (
     
-    <>
+    <div className={styles.bigBox}>
       <Webcam
+
+        className={styles.webcam}
         audio={false}
         ref={webcamRef}
         screenshotFormat="image/jpeg"
       />
-      <button onClick={capture}>Capture photo</button>
+      <button className={styles.button} onClick={capture}>Capture photo</button>
     
-    </>
+    </div>
   );
 };
 
 WebcamCapture.propTypes = {
-  location: PropTypes.string.isRequired
-}; 
+  location: PropTypes.object.isRequired
+};
