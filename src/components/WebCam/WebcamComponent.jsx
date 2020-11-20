@@ -8,7 +8,6 @@ import PropTypes from 'prop-types';
 import styles from './WebcamComponent.css';
 
 
-
 export const WebcamCapture = ({ location }) => {
   const webcamRef = useRef(null);
   const [imgSrc, setImgSrc] = useState(null);
@@ -49,6 +48,7 @@ export const WebcamCapture = ({ location }) => {
     
     <div className={styles.bigBox}>
       <Webcam
+
         className={styles.webcam}
         audio={false}
         ref={webcamRef}
@@ -62,4 +62,4 @@ export const WebcamCapture = ({ location }) => {
 
 WebcamCapture.propTypes = {
   location: PropTypes.object.isRequired
-}; 
+};

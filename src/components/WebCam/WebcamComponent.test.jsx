@@ -15,14 +15,12 @@ describe('Webcam component', () => {
     const { asFragment } = render(
       <Provider store={store}>
         <Router 
-          initialEntries={[WebcamCapture]} component={WebcamCapture}
-        >
+          initialEntries={['/webcam']}>
           <Switch>
             <Route
               exact path="/webcam"
               component={WebcamCapture}
             />
-            <WebcamCapture />
           </Switch>
         </Router>
       </Provider>
