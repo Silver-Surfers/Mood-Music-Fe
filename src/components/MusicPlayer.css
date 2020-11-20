@@ -1,11 +1,107 @@
+:root {
+  --red: #e63946ff;
+  --violet: #6f58c9ff;
+  --purple: #3c153bff;
+  --orange: #ff6700ff;
+  --green: #1DB954;
+  --yellow: #e5f77dff;
+  --blue:#457b9dff;
+  --surprise: #f1faeeff;
+}
+
 .bigBox {
   display: flex;
   flex-direction: column;
   align-items: center;
   margin-top: 40px;
+  min-height: 100vh;
+  animation: gradient 17s ease infinite;
+  
 }
+
+
 .controls {
   display: flex;
-  flex-direction: row;
-  margin-top: 10px;
+  flex-direction: column;
+  text-align: center;
+}
+
+.button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 100px;
+  height: 40px;
+  text-transform: uppercase;
+  letter-spacing: 1.1px;
+  font-weight: 600;
+  margin: 14px 5px 0 5px; 
+  box-shadow: gray 3px 3px 5px;
+  background: linear-gradient(90deg, rgba(101,211,110,1) 0%, rgb(10, 110, 55) 100%);
+  border: solid black 3px;
+  border-radius: 100px;
+  padding: 5px;
+}
+
+.player {
+  box-shadow: gray 5px 5px 5px;
+  border: solid black 5px;
+  border-radius: 30px;
+  margin-top: 10vh;
+}
+
+ 
+.happiness {
+  background: linear-gradient(45deg, var(--green), var(--yellow), var(--green), var(--blue));
+  animation: gradient 17s ease infinite;
+  
+}
+
+.anger {
+  
+  background: linear-gradient(45deg, var(--red), var(--yellow), var(--red), var(--orange));
+  animation: gradient 17s ease infinite;
+}
+
+.sadness {
+  background: linear-gradient(45deg, var(--blue), var(--violet), var(--blue), var(--yellow));
+  animation: gradient 17s ease infinite;
+}
+
+.fear {
+  background: linear-gradient(45deg, var(--orange), var(--red), var(--orange), var(--yellow));
+  animation: gradient 17s ease infinite;
+}
+
+.disgust {
+  background: linear-gradient(45deg, var(--purple), var(--yellow), var(--purple), var(--violet));
+  animation: gradient 17s ease infinite;
+}
+
+.surprise {
+  background: linear-gradient(45deg, var(--yellow), var(--orange), var(--yellow), var(--violet));
+  animation: gradient 17s ease infinite;
+}
+
+.contempt {
+  background: linear-gradient(45deg, var(--violet), var(--red), var(--violet), var(--purple));
+  animation: gradient 17s ease infinite;
+}
+
+.neutral {
+  background: linear-gradient(45deg, var(--neutral), var(--green), var(--neutral), var(--yellow));
+  animation: gradient 17s ease infinite;
+}
+
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
 }

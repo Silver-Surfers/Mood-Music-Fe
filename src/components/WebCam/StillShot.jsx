@@ -35,10 +35,10 @@ export const StillShot = () => {
         </div>
       </div>
       <div>
-        <button onClick={() => {
+        <button className={styles.button} onClick={() => {
           history.push('/webcam');
         }}>Retake Your Picture</button>
-        <button onClick={() => {
+        <button className={styles.button} onClick={() => {
           history.push('/media');
         }}>Submit for Playlist</button>
       </div>

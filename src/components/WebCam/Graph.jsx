@@ -29,14 +29,14 @@ export const Graph = () => {
     { name: 'Surprise', value: surprise * 100 }
   ];
 
-  const COLORS = ['#FF0000',
-    '#990099',
-    '#660099',
-    '#FFCC00',
-    '#66CC00',
-    '#e6e6da',
-    '#3399FF',
-    '#ECEC46'];
+  const COLORS = ['#e63946ff',
+    '#6f58c9ff',
+    '#3c153bff',
+    '#ff6700ff',
+    '#1DB954',
+    '#f1faeeff',
+    '#457b9dff',
+    '#e5f77dff'];
 
   const RADIAN = Math.PI / 180;
   const renderCustomizedLabel = ({
