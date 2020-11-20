@@ -12,7 +12,6 @@ import styles from './App.css';
 import { AboutPage } from '../AboutPage';
 
 
-
 export default function App() {
   return (
     <div className={styles.app}>
