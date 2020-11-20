@@ -16,7 +16,7 @@ export const MusicPlayer = () => {
   const dispatch = useDispatch();
   const emotion = useSelector(selectEmotion);
   const playlists = useSelector(selectPlaylists);
-  const num = Math.ceil(Math.random() * playlists.length);
+  const num = Math.floor(Math.random() * playlists.length);
   const playlist = playlists[num];
   const history = useHistory();
   const colorCode = colorCodeFunction(emotion);
