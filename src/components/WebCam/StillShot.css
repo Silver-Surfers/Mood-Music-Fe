@@ -15,6 +15,7 @@
   justify-content: center;
   align-items: center;
   overflow: scroll;
+  background: linear-gradient(45deg, var(--neutral), var(--green), var(--neutral), var(--yellow));
 
   img {
     margin-top: 40px;
@@ -40,7 +41,7 @@
   }
 
   .graph {
-    
+    box-shadow: gray 3px 3px 5px;
    
 
   }
@@ -57,7 +58,9 @@
 
 
 .anger {
-  background-color: var(--red);
+  background: linear-gradient(45deg, var(--orange), var(--red), var(--red), var(--red), var(--yellow));
+  color: black;
+  text-transform: uppercase;
   max-height: 30px;
   max-width: 100px;
   min-height: 20px;
@@ -69,7 +72,9 @@
 }
 
 .contempt{
-  background-color: var(--violet);
+  background: linear-gradient(45deg, var(--purple), var(--violet), var(--violet), var(--violet), var(--orange));
+  color: black;
+  text-transform: uppercase;
   max-height: 30px;
   max-width: 100px;
   min-height: 20px;
@@ -81,7 +86,9 @@
 }
 
 .disgust {
-  background-color: var(--purple);
+  background: linear-gradient(45deg, var(--violet), var(--purple), var(--purple), var(--purple), var(--yellow));
+  color: var(--neutral);
+  text-transform: uppercase;
   max-height: 30px;
   max-width: 100px;
   min-height: 20px;
@@ -92,8 +99,10 @@
   margin-top: 10px;
 }
 
-.fear{
-  background-color: var(--orange);
+.fear {
+  background: linear-gradient(45deg, var(--red), var(--orange), var(--orange), var(--orange), var(--violet));
+  color: black;
+  text-transform: uppercase;
   max-height: 30px;
   max-width: 100px;
   min-height: 20px;
@@ -105,7 +114,9 @@
 }
 
 .happiness {
-  background-color: var(--green);;
+  background: linear-gradient(45deg, var(--orange), var(--green), var(--green), var(--green), var(--yellow));
+  color: black;
+  text-transform: uppercase;
   max-height: 30px;
   max-width: 100px;
   min-height: 20px;
@@ -117,7 +128,9 @@
 }
 
 .neutral {
-  background-color: var(--neutral);
+  background: linear-gradient(45deg, var(--green), var(--neutral), var(--neutral), var(--neutral), var(--blue));
+  color: black;
+  text-transform: uppercase;
   max-height: 30px;
   max-width: 100px;
   min-height: 20px;
@@ -129,7 +142,9 @@
 }
 
 .sadness {
-  background-color: var(--blue);
+  background: linear-gradient(45deg, var(--purple), var(--blue), var(--blue), var(--blue), var(--orange));
+  color: black;
+  text-transform: uppercase;
   max-height: 30px;
   max-width: 100px;
   min-height: 20px;
@@ -141,6 +156,9 @@
 }
 
 .surprise {
+  background: linear-gradient(45deg, var(--orange), var(--yellow), var(--yellow), var(--yellow), var(--green));
+  color: black;
+  text-transform: uppercase;
   background-color: var(--yellow);
   max-height: 30px;
   max-width: 100px;
@@ -153,10 +171,12 @@
 }
 
 .button {
-  margin: 0 20px 20px 0;
-  background-color: var(--green);
+  margin: 20px 20px 20px 20px;
+  background: linear-gradient(90deg, rgba(101,211,110,1) 0%, rgb(10, 110, 55) 100%);
+  text-transform: uppercase;
   border: solid black 3px;
-  border-radius: 100px;
+  height: 40px;
+  border-radius: 50px;
   padding: 5px;
   box-shadow: gray 3px 3px 5px;
 }

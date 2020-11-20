@@ -33,7 +33,7 @@ export const MusicPlayer = () => {
   }, []);
 
   return (
-    <div className={styles[colorCode]}>
+    <section className={styles[colorCode]}>
       <div className={styles.bigBox}>
         {playlist &&
     <iframe
@@ -58,6 +58,6 @@ export const MusicPlayer = () => {
           history.push('/');
         }}>Home</button>
       </div>
-    </div>
+    </section>
   );
 };

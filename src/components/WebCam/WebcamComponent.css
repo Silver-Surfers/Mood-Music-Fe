@@ -6,14 +6,15 @@
   --green: #1DB954;
   --yellow: #e5f77dff;
   --blue:#457b9dff;
-  --surprise: #f1faeeff;
+  --neutral: #f1faeeff;
 }
 
 .bigBox {
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: var(--neutral);
+  background: linear-gradient(45deg, var(--neutral), var(--green), var(--neutral), var(--yellow));
+  min-height: 100vh;
 }
 
 .webcam {
@@ -28,9 +29,14 @@
   display: flex;
   align-items: center;
   justify-content: center;
+
   min-width: 100px;
+  height: 40px;
+  text-transform: uppercase;
   margin-top: 10px;
-  background-color: var(--green);
+  letter-spacing: 1.1px;
+  font-weight: 600;
+  background: linear-gradient(90deg, rgba(101,211,110,1) 0%, rgb(10, 110, 55) 100%);
   border: solid black 3px;
   border-radius: 100px;
   padding: 5px;
