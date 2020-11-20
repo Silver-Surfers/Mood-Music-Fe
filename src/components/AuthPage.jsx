@@ -22,7 +22,7 @@ export const AuthPage = () => {
   
 
   return (
-    <>
+    <div className={styles.mainPage}>
       <div className={styles.flex}>
         <div className={styles.record}>
         </div>
@@ -37,7 +37,7 @@ export const AuthPage = () => {
           </div>
         </div>
       </div>
-    </>
+    </div>
   );
 };
 // AuthPage.propTypes = {

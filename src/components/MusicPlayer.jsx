@@ -16,9 +16,6 @@ export const MusicPlayer = () => {
   const playlist = playlists[num];
   const history = useHistory();
   
-
-
-  
   useEffect(() => {
     const singleEmotion = emotionFunction(emotion);
     const doubleEmotions = twoEmotions(singleEmotion);
@@ -48,6 +45,7 @@ export const MusicPlayer = () => {
           history.push('/media');
         }}>Get a different playlist</button>
       </div>
+      <div className={styles.waveform}></div>
     </div>
   );
 };
