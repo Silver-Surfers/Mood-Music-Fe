@@ -33,15 +33,12 @@ export const requestMusic = (emotion, accessToken) => {
         'Content-Type' : 'application/json'
       },
     })
-  
-  
     .then(res => res.json())
     .then(json => json.playlists.items)
     .then(items => items.map(item => (
       item.id
     )));
     
-  
   } catch(error) {
     console.log(error);
   }
