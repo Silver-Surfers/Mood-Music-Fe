@@ -1,0 +1,18 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Webcam component renders takes a snapshot photo through the user/s webcam 1`] = `
+<DocumentFragment>
+  <div
+    class="bigBox"
+  >
+    <video
+      autoplay=""
+      class="webcam"
+      playsinline=""
+    />
+    <button>
+      Capture photo
+    </button>
+  </div>
+</DocumentFragment>
+`;
