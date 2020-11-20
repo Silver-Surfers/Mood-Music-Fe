@@ -12,7 +12,6 @@ export const AboutPage = () => {
 
   const nameStuff = names.map(name => (
     <>
-      
       <li className={styles.devBox} key={name.name}>
         <img className={styles.devImg} src={name.image} alt={name.name} />
         <h2>{name.name}</h2>
@@ -30,12 +29,10 @@ export const AboutPage = () => {
               className={styles.imgLink}
               src={linkedIn} 
               alt={`${name.name} linkedIn`}>
-            </img>
-              
+            </img> 
           </a>
         </div>
       </li>
-     
     </>
   ));
 
