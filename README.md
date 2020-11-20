@@ -1,7 +1,7 @@
-<<<<<<< HEAD
+
 # Mood-Music-Fe
-=======
-<<<<<<< HEAD
+
+
 # MOOD MUSIC
 =======
 # Mood-Music-Fe
