@@ -23,47 +23,26 @@
   display: flex;
   flex-direction: column;
 
-  h3 {
-    margin: 20px;
-    font-family: 'Righteous';
-  }
-
-  .imgLink {
-    margin: 5px;
-  }
-
-  .jerudContainer {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    margin: 20px;
-  }
-
-  .brianContainer {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    margin: 20px;
-  }
-
-  .natContainer {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    margin: 20px;
-  }
-
-  .annaliseContainer {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    margin: 20px;
-  }
 }
+    .imgLink {
+      margin: 5px;
+    }
+
+  .devBox {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin: 25px;
+  
+    h2 {
+      font-size: 40px;
+      margin: 20px;
+      font-family: 'Righteous';
+    }
+    
+  }
+
 
 .devImg {
   height: 200px;
