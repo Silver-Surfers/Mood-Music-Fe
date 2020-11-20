@@ -22,10 +22,10 @@ export const AboutPage = () => {
           </p>
           <div className={styles.link}>
             <a href="https://github.com/Jerud-Moyer">
-              <img src={github}alt="Jerud-Github"></img>
+              <img className={styles.imgLink} src={github}alt="Jerud-Github"></img>
             </a>
             <a href="https://www.linkedin.com/in/jerud-moyer/">
-              <img src={linkedIn} alt="Jerud-LinkedIn"></img>
+              <img className={styles.imgLink} src={linkedIn} alt="Jerud-LinkedIn"></img>
             </a>
           </div>
         </div>
@@ -38,10 +38,10 @@ export const AboutPage = () => {
           </p>
           <div className={styles.link}>
             <a href="https://github.com/BrianMcPhillips">
-              <img src={github}alt="Brian-Github"></img>
+              <img className={styles.imgLink} src={github}alt="Brian-Github"></img>
             </a>
             <a href="https://www.linkedin.com/in/brianmcphillips">
-              <img src={linkedIn} alt="Brian-LinkedIn"></img>
+              <img className={styles.imgLink} src={linkedIn} alt="Brian-LinkedIn"></img>
             </a>
           </div>
         </div>
@@ -54,10 +54,10 @@ export const AboutPage = () => {
           </p>
           <div className={styles.link}>
             <a href="https://github.com/Nate-Kruck">
-              <img src={github}alt="Nate-Github"></img>
+              <img className={styles.imgLink} src={github}alt="Nate-Github"></img>
             </a>
             <a href="https://www.linkedin.com/in/natekruck/">
-              <img src={linkedIn} alt="Nate-LinkedIn"></img>
+              <img className={styles.imgLink} src={linkedIn} alt="Nate-LinkedIn"></img>
             </a>
           </div>
         </div>
@@ -70,10 +70,10 @@ export const AboutPage = () => {
           </p>
           <div className={styles.link}>
             <a href="https://github.com/Annalise-M">
-              <img src={github}alt="Annalise-Github"></img>
+              <img className={styles.imgLink} src={github}alt="Annalise-Github"></img>
             </a>
             <a href="https://www.linkedin.com/in/annalise-murphy/">
-              <img src={linkedIn} alt="Annalise-LinkedIn"></img>
+              <img className={styles.imgLink} src={linkedIn} alt="Annalise-LinkedIn"></img>
             </a>
           </div>
         </div>
