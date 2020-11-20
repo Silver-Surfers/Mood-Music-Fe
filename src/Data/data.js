@@ -35,7 +35,7 @@ export const names = [
     name: 'Annalise Murphy',
     image: AnnaliseMurphy,
     description: `Annalise is a software engineer, playlist curator and
-      an avid music lover! When she is not jamming out Black Sabbeth,
+      an avid music lover! When she is not jamming out Black Sabbath,
       she is busy building Full Stack apps.`,
     github: 'https://github.com/Annalise-M',
     linkedin: 'https://www.linkedin.com/in/annalise-murphy'
