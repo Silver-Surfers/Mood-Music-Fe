@@ -7,6 +7,9 @@ import NateKruck from '../Images/NateKruck.png';
 import github from '../Images/github.png';
 import linkedIn from '../Images/linkedIn.jpg';
 import styles from './AboutPage.css';
+import { useHistory } from 'react-router-dom';
+
+const history = useHistory();
 
 export const AboutPage = () => {
 
@@ -76,6 +79,11 @@ export const AboutPage = () => {
               <img className={styles.imgLink} src={linkedIn} alt="Annalise-LinkedIn"></img>
             </a>
           </div>
+        </div>
+        <div className={styles.butDiv}>
+          <button className={styles.button} onClick={() => {
+            history.push('/');
+          }}>Home</button>
         </div>
       </div>
     </>

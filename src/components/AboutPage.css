@@ -81,3 +81,28 @@
 h3 {
   font-size: 40px;
 }
+
+.button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 100px;
+  height: 40px;
+  text-transform: uppercase;
+  letter-spacing: 1.1px;
+  font-weight: 600;
+  margin: 10px; 
+  box-shadow: gray 3px 3px 5px;
+  background: linear-gradient(90deg, rgba(101,211,110,1) 0%, rgb(10, 110, 55) 100%);
+  border: solid black 3px;
+  border-radius: 100px;
+  padding: 5px;
+  cursor: pointer;
+  max-width: 100px;
+}
+.butDiv {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  margin-bottom: 20px;
+}
