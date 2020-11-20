@@ -17,7 +17,6 @@ export const WebcamCapture = ({ location }) => {
   const { search } = location;
   const params = new URLSearchParams(search);
   const token = params.get('token');
-  console.log(token);
 
   const capture = useCallback(async() => {
     const imageSrc = webcamRef.current.getScreenshot();

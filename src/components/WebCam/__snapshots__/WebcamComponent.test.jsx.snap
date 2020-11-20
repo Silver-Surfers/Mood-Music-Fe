@@ -10,7 +10,9 @@ exports[`Webcam component renders takes a snapshot photo through the user/s webc
       class="webcam"
       playsinline=""
     />
-    <button>
+    <button
+      class="button"
+    >
       Capture photo
     </button>
   </div>
