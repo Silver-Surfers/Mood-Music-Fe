@@ -14,9 +14,8 @@
   flex-direction: column;
   align-items: center;
   margin-top: 40px;
-  min-height: 100vh;
   animation: gradient 17s ease infinite;
-  
+  overflow: scroll;
 }
 
 
@@ -66,51 +65,57 @@
   background: linear-gradient(45deg, var(--green), var(--yellow), var(--green), var(--blue));
   background-size: 200% 200%;
   animation: gradient 17s ease infinite;
- 
+  overflow: scroll;
   
 }
 
 .anger {
-  
   background: linear-gradient(45deg, var(--red), var(--yellow), var(--red), var(--orange));
   background-size: 200% 200%;
   animation: gradient 17s ease infinite;
+  overflow: scroll;
 }
 
 .sadness {
   background: linear-gradient(45deg, var(--blue), var(--violet), var(--blue), var(--yellow));
   background-size: 200% 200%;
   animation: gradient 17s ease infinite;
+  overflow: scroll;
 }
 
 .fear {
   background: linear-gradient(45deg, var(--orange), var(--red), var(--orange), var(--yellow));
   background-size: 200% 200%;
   animation: gradient 17s ease infinite;
+  overflow: scroll;
 }
 
 .disgust {
-  background: linear-gradient(45deg, var(--purple), var(--yellow), var(--purple), var(--violet));
+  background: linear-gradient(45deg, var(--purple), var(--purple), var(--violet), var(--yellow),  var(--purple) );
   background-size: 200% 200%;
   animation: gradient 17s ease infinite;
+  overflow: scroll;
 }
 
 .surprise {
   background: linear-gradient(45deg, var(--yellow), var(--orange), var(--yellow), var(--violet));
   background-size: 200% 200%;
   animation: gradient 17s ease infinite;
+  overflow: scroll;
 }
 
 .contempt {
   background: linear-gradient(45deg, var(--violet), var(--red), var(--violet), var(--purple));
   background-size: 200% 200%;
   animation: gradient 17s ease infinite;
+  overflow: scroll;
 }
 
 .neutral {
   background: linear-gradient(45deg, var(--neutral), var(--green), var(--neutral), var(--yellow));
   background-size: 200% 200%;
   animation: gradient 17s ease infinite;
+  overflow: scroll;
 }
 
 
