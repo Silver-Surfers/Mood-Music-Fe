@@ -1,0 +1,35 @@
+.mainContainer {
+  display: flex;
+  flex-direction: column;
+
+  .jerudContainer {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .brianContainer {
+
+  }
+
+  .nateContainer {
+
+  }
+
+  .annaliseContainer {
+
+  }
+}
+
+.devImg {
+  height: 200px;
+  width: auto;
+}
+
+.link {
+  height: 50px;
+  width: 50px;
+}
+
+h3 {
+  font-size: 40px;
+}
