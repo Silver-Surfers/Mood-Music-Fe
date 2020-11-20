@@ -8,7 +8,7 @@ import {
   twoEmotions,
   colorCodeFunction
 } from '../utils/emotionFunction';
-import { useHistory } from 'react-router-dom';
+import { useHistory, Link } from 'react-router-dom';
 import styles from './MusicPlayer.css';
 
 export const MusicPlayer = () => {
@@ -57,6 +57,7 @@ export const MusicPlayer = () => {
         <button className={styles.button} onClick={() => {
           history.push('/');
         }}>Home</button>
+        <Link className={styles.link} to={'/about'}>about us</Link>
       </div>
     </section>
   );

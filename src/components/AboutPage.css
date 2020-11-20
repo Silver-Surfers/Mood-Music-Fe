@@ -1,0 +1,87 @@
+:root {
+  --red: #e63946ff;
+  --violet: #6f58c9ff;
+  --purple: #3c153bff;
+  --orange: #ff6700ff;
+  --green: #1DB954;
+  --yellow: #e5f77dff;
+  --blue:#457b9dff;
+  --surprise: #f1faeeff;
+}
+
+@font-face {
+  font-family: 'Righteous', cursive;
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/gochihand/v11/hES06XlsOjtJsgCkx1Pkfon_-18kTWE.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+.mainContainer {
+  background: linear-gradient(45deg, var(--green), var(--yellow), var(--green), var(--blue));
+  display: flex;
+  flex-direction: column;
+
+}
+    .imgLink {
+      margin: 5px;
+    }
+
+  .devBox {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin: 25px;
+  
+    h2 {
+      font-size: 40px;
+      margin: 20px;
+      font-family: 'Righteous';
+    }
+    
+  }
+
+
+.devImg {
+  height: 200px;
+  width: auto;
+  box-shadow: gray 5px 5px 5px;
+  border: solid black 5px;
+  border-radius: 30px;
+}
+
+.link {
+  height: 50px;
+  width: 50px;
+}
+
+h3 {
+  font-size: 40px;
+}
+
+.button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 100px;
+  height: 40px;
+  text-transform: uppercase;
+  letter-spacing: 1.1px;
+  font-weight: 600;
+  margin: 10px; 
+  box-shadow: gray 3px 3px 5px;
+  background: linear-gradient(90deg, rgba(101,211,110,1) 0%, rgb(10, 110, 55) 100%);
+  border: solid black 3px;
+  border-radius: 100px;
+  padding: 5px;
+  cursor: pointer;
+  max-width: 100px;
+}
+.butDiv {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  margin-bottom: 20px;
+}
