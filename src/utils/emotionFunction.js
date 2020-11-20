@@ -50,7 +50,7 @@ const arrayMatch = (singleEmotion) => {
 
 export const twoEmotions = (singleEmotion) => {
   const emotionArray = arrayMatch(singleEmotion);
-  const randomNumber = Math.ceil(Math.random() * emotionArray.length);
+  const randomNumber = Math.floor(Math.random() * emotionArray.length);
   const secondEmotion = emotionArray[randomNumber];
 
   return `${singleEmotion},${secondEmotion}`;
