@@ -65,8 +65,7 @@
   background: linear-gradient(45deg, var(--green), var(--yellow), var(--green), var(--blue));
   background-size: 200% 200%;
   animation: gradient 17s ease infinite;
-  overflow: scroll;
-  
+  overflow: scroll;  
 }
 
 .anger {
@@ -92,6 +91,7 @@
 
 .disgust {
   background: linear-gradient(45deg, var(--purple), var(--purple), var(--violet), var(--yellow),  var(--purple) );
+  background: linear-gradient(45deg, var(--purple), var(--yellow), var(--purple), var(--violet));
   background-size: 200% 200%;
   animation: gradient 17s ease infinite;
   overflow: scroll;
