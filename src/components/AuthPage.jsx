@@ -1,14 +1,12 @@
 /* eslint-disable max-len */
 import React from 'react';
 import styles from './AuthPage.css';
-import spotify from  '../Data/Images/spotify.png';
-
+import spotify from  '../images/spotify.png';
 
 export const AuthPage = () => {
 
-  
   return (
-    <>
+    <div className={styles.mainPage}>
       <div className={styles.flex}>
         <div className={styles.record}>
         </div>
@@ -23,6 +21,6 @@ export const AuthPage = () => {
           </div>
         </div>
       </div>
-    </>
+    </div>
   );
 };

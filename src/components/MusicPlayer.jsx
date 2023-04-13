@@ -8,7 +8,7 @@ import {
   twoEmotions,
   colorCodeFunction
 } from '../utils/emotionFunction';
-import { useHistory } from 'react-router-dom';
+import { useHistory, Link } from 'react-router-dom';
 import styles from './MusicPlayer.css';
 
 export const MusicPlayer = () => {
@@ -16,7 +16,7 @@ export const MusicPlayer = () => {
   const dispatch = useDispatch();
   const emotion = useSelector(selectEmotion);
   const playlists = useSelector(selectPlaylists);
-  const num = Math.ceil(Math.random() * playlists.length);
+  const num = Math.floor(Math.random() * playlists.length);
   const playlist = playlists[num];
   const history = useHistory();
   const colorCode = colorCodeFunction(emotion);
@@ -57,6 +57,7 @@ export const MusicPlayer = () => {
         <button className={styles.button} onClick={() => {
           history.push('/');
         }}>Home</button>
+        <Link className={styles.link} to={'/about'}>about us</Link>
       </div>
     </section>
   );
